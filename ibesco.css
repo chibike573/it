@@ -1,0 +1,2857 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.parent {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  height: 45rem;
+  position: relative;
+  z-index: 5000;
+  top: -2rem;
+}
+
+.parent .child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+}
+
+.parent .child1 {
+  background: url(./img/truck9.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  align-content: center;
+  padding-left: 4rem;
+}
+
+.parent .child.view {
+  display: block;
+}
+
+.parent .child1 h1 {
+  font-size: 4rem;
+  background-color: white;
+  padding: 4px 9px;
+  margin: 0;
+  margin-top: 10rem;
+  border-radius: 5px;
+  /* width: 20rem; */
+  width: fit-content;
+  color: orange;
+  text-wrap: nowrap;
+  overflow: hidden;
+}
+
+.parent .child1 h4 {
+  background-color: white;
+  width: fit-content;
+  font-size: 2rem;
+  color: rgba(0, 0, 0, 0.521);
+  padding: 3px 5px;
+  border-radius: 5px;
+  margin-top: 6px;
+  text-wrap: nowrap;
+  overflow: hidden;
+  text-transform: capitalize;
+  transition: all 2s;
+  opacity: 0;
+  transform: translateX(-35rem);
+}
+
+.parent .child1 h4.show {
+  opacity: 1;
+  transform: translateX(0rem);
+}
+
+.parent .child2 {
+  align-content: center;
+  justify-items: center;
+  background: url(./img/truck10.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+.parent .child2 h1 {
+  font-size: 4rem;
+  background-color: white;
+  padding: 4px 9px;
+  margin: 0;
+  border-radius: 5px;
+  color: orange;
+  width: fit-content;
+  text-wrap: nowrap;
+  overflow: hidden;
+}
+
+.parent .child2 h4 {
+  background-color: white;
+  font-size: 2rem;
+  color: rgba(0, 0, 0, 0.521);
+  padding: 3px 5px;
+  border-radius: 5px;
+  margin-top: 6px;
+  width: 53rem;
+  text-transform: capitalize;
+  text-wrap: nowrap;
+  overflow: hidden;
+}
+
+.navbar-info {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+}
+
+.navbar-info .info {
+  position: fixed;
+  z-index: 7000;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding-left: 3rem;
+  display: flex;
+  align-items: center;
+  height: 7rem;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.788),
+    rgba(0, 0, 0, 0.705)
+  );
+  transition: all 0.5s;
+}
+
+.info2 {
+  transform: translateY(-20rem);
+}
+
+.navbar-info .info img {
+  margin-right: 1rem;
+  width: 6rem;
+}
+
+.navbar-info .info h1 {
+  font-size: 3rem;
+  color: white;
+}
+
+.navbar-info .contact {
+  color: #dadada;
+  margin-left: 30rem;
+  font-size: 18px;
+  line-height: 2rem;
+}
+
+.navbar-info .contact a {
+  color: #dadada;
+  text-decoration: none;
+}
+
+.navbar-info .info button {
+  font-size: 18px;
+  width: 12rem;
+  padding: 1rem;
+  margin-left: 5rem;
+  cursor: pointer;
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  transition: all 1.5s;
+  font-weight: bold;
+}
+
+.navbar-info .info button:hover {
+  box-shadow: inset 12rem 0rem 7px orange;
+}
+
+.navbar-info .info .contact a:hover {
+  color: orange;
+}
+
+.navbar-info .info .menu {
+  display: none;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: all 0.5s;
+  background-color: orange;
+  padding: 3px 5px;
+}
+
+.navbar-info .info .menu:hover {
+  background-color: orange;
+  padding: 3px 12px;
+}
+
+.nav2 {
+  padding-top: 2rem;
+  padding-left: 20px;
+  color: white;
+  position: fixed;
+  background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.788),
+      rgba(0, 0, 0, 0.705)
+    ),
+    url(./img/truck4.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  inset: 0 0 0 auto;
+  z-index: 12000;
+  width: 15rem;
+  transform: translateX(20rem);
+  transition: all 1s;
+  display: none;
+}
+
+.nav2 ul {
+  margin-bottom: 8rem;
+}
+
+.nav2 ul li {
+  transform: translateX(20rem);
+  transition: all 2s;
+  margin-bottom: 2rem;
+}
+.nav2 ul:has(li) {
+  list-style: none;
+  font-size: 20px;
+}
+
+.nav2 ul li a {
+  text-decoration: none;
+  color: white;
+  /* margin-top: 3rem; */
+}
+
+.nav2 main {
+  font-size: 20px;
+  /* margin-top: 5rem; */
+}
+.nav2 main a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav2 button {
+  background-color: orange;
+  width: 13rem;
+  font-size: 20px;
+  margin-top: 2rem;
+  height: 3rem;
+  text-align: center;
+  justify-self: center;
+  cursor: pointer;
+  border: none;
+  transition: all 0.4s;
+}
+
+.nav2 button:hover {
+  box-shadow: 2px 2px 5px orange;
+}
+
+.nav2 ul li:nth-child(1) {
+  transition: all 1.2s;
+}
+
+.nav2 ul li:nth-child(2) {
+  transition: all 1.4s;
+}
+
+.nav2 ul li:nth-child(3) {
+  transition: all 1.6s;
+}
+
+.nav2 ul li:nth-child(4) {
+  transition: all 1.8s;
+}
+
+.nav3 {
+  transform: translateX(0);
+}
+
+.nav3 ul li {
+  transform: translateX(0);
+}
+
+.nav {
+  display: flex;
+  top: 9rem;
+  position: relative;
+  background-color: white;
+  height: 5em;
+  width: 60rem;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.719);
+
+  /* display: none; */
+}
+
+.nav ul {
+  display: flex;
+  margin-left: 5rem;
+  /* background-color: orange; */
+  /* justify-content: space-evenly; */
+  /* padding-left: ; */
+}
+
+.nav ul img {
+  width: 25px;
+}
+
+.nav ul li {
+  list-style: none;
+  margin-right: 7rem;
+  font-size: 20px;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  transition: all 0.5s;
+  color: rgba(0, 0, 0, 0.582);
+}
+
+.nav ul li a:hover {
+  color: orange;
+}
+
+.protection {
+  position: relative;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: rgba(0, 0, 0, 0.623);
+  background: linear-gradient(to right, rgb(252, 210, 137), lightpink);
+  display: flex;
+  height: 15rem;
+  padding-left: 2rem;
+  margin-top: -2rem;
+  font-size: 27px;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.protection img {
+  width: 7rem;
+  margin-right: 2rem;
+}
+
+.protection .img2 {
+  z-index: 6000;
+  position: absolute;
+  top: -5rem;
+  right: 0;
+  width: 25rem;
+}
+
+.protection p {
+  font-size: 20px;
+  margin: 0;
+}
+
+.services {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+}
+
+.services span {
+  font-size: 40px;
+  display: flex;
+  /* background-color: orange; */
+  width: fit-content;
+  align-items: center;
+}
+
+.services span hr {
+  width: 5rem;
+  height: 0rem;
+  margin-right: 12px;
+  border-color: black;
+}
+
+.guarantee {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: 4rem;
+  /* line-break: loose; */
+}
+
+.inspire {
+  /* height: 40rem; */
+  display: flex;
+  margin-top: 3rem;
+  margin-bottom: 12px;
+}
+
+.inspire div {
+  width: 50rem;
+}
+
+.inspire .img {
+  position: relative;
+  background: url(./img/truck5.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.inspire .img button {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  position: absolute;
+  height: 6rem;
+  width: 6rem;
+  font-size: 20px;
+  border-radius: 3rem;
+  color: rgba(0, 0, 0, 0.582);
+  font-weight: bold;
+  border: none;
+  background-color: rgba(255, 166, 0, 0.925);
+  pointer-events: none;
+  transition: all 0.5s;
+  opacity: 0;
+}
+
+.inspire .transport {
+  padding-top: 1rem;
+  padding-left: 2rem;
+  cursor: pointer;
+}
+
+.inspire .transport h1 {
+  line-height: 7rem;
+  margin: 0;
+  margin-bottom: 1.7rem;
+  font-size: 6rem;
+  -webkit-text-stroke: 2px black;
+  color: transparent;
+}
+
+.inspire .transport h1:hover {
+  color: orange;
+}
+
+.inspire .transport p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 2rem;
+  color: rgba(0, 0, 0, 0.582);
+}
+
+.inspire .transport article {
+  margin-top: 2rem;
+}
+
+.inspire .transport article button {
+  width: 10rem;
+  height: 4rem;
+  border-radius: 2rem;
+  border: 1px solid black;
+  cursor: pointer;
+  transition: all 1s;
+}
+
+.inspire .transport article button:hover {
+  box-shadow: inset 10rem 0 0 orange;
+}
+
+.reason {
+  display: flex;
+  height: 25rem;
+  margin-top: 4rem;
+  justify-content: center;
+}
+.reason > div {
+  width: 35rem;
+}
+
+.character {
+  background: url(./img/feature.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  transition: all 1s;
+  cursor: zoom-in;
+}
+
+.character:hover {
+  background-size: 120%;
+  filter: brightness(65%);
+}
+
+.why {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  padding-left: 25px;
+  padding-top: 20px;
+}
+
+.why span {
+  font-size: 2rem;
+  display: block;
+  color: rgba(0, 0, 0, 0.801);
+  /* align-items: center; */
+  /* background-color: red; */
+  padding: 0;
+  /* justify-content:left; */
+}
+
+.why h3 {
+  font-size: 23px;
+  margin-bottom: 0;
+  color: rgba(0, 0, 0, 0.788);
+}
+
+.why span hr {
+  width: 5rem;
+  margin: 0;
+  margin-top: 10px;
+  background-color: orange;
+  height: 6px;
+  border: 2px solid orange;
+}
+
+.why p {
+  line-height: 28px;
+}
+
+.why p {
+  color: rgba(0, 0, 0, 0.76);
+}
+
+.why .button button {
+  cursor: pointer;
+  background-color: orange;
+  border: 2px solid orange;
+  width: 12rem;
+  height: 3rem;
+  font-weight: bolder;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  transition: all 1s;
+}
+
+.why .button button:hover {
+  box-shadow: inset 0 3rem 0 white;
+}
+
+.grid {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  margin-top: 2rem;
+  justify-content: space-evenly;
+  gap: 10px;
+  transform: translateY(10rem);
+  opacity: -2;
+  transition: all 1s;
+}
+.grid2 {
+  transform: translateY(0);
+  opacity: 1;
+}
+.grid > div {
+  /* width: 20rem; */
+  height: 15rem;
+  cursor: pointer;
+
+  /* background-color: red; */
+}
+
+.grid > div span {
+  color: rgba(0, 0, 0, 0.788);
+  font-weight: bold;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.grid > div span img {
+  padding: 5px;
+  /* display: flex; */
+  width: 4rem;
+  border-radius: 2rem;
+  height: 4rem;
+  margin-right: 15px;
+  background-color: orange;
+  transition: all 0.8s;
+}
+.grid > div:hover span img {
+  transform: rotate(-50deg);
+}
+
+.grid > div p {
+  color: rgba(0, 0, 0, 0.747);
+  margin: 0;
+  margin-top: 10px;
+  margin-left: 10px;
+  font-weight: 500;
+}
+
+.score-board {
+  display: flex;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  color: white;
+  align-items: center;
+  justify-content: space-around;
+  background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.685),
+      rgba(0, 0, 0, 0.486)
+    ),
+    url(./img/truck8.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 20rem;
+  margin-top: 4rem;
+}
+.score-board > div {
+  text-align: center;
+  color: white;
+}
+
+.score-board > div :is(p) {
+  margin: 0;
+  font-size: 7rem;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 2px white;
+}
+.score-board > div :is(article) {
+  font-size: 20px;
+}
+
+.consult {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding-top: 4rem;
+  display: flex;
+  align-items: center;
+  padding-left: 5rem;
+  margin-top: 5rem;
+  margin-bottom: 10rem;
+  background: linear-gradient(to right, rgb(252, 210, 137), lightpink);
+  padding-bottom: 2rem;
+  transition: all 2s;
+  /* height: 20rem; */
+}
+
+#consult {
+  transition: all 2s;
+}
+
+.consult hr {
+  height: 25rem;
+  width: 0rem;
+  margin: 0;
+  margin-right: 15px;
+  border: 2px solid orange;
+}
+
+.consult form {
+  font-weight: bold;
+  background-color: white;
+  width: 40rem;
+  height: 35rem;
+  margin-right: 2rem;
+}
+
+.consult form :is(.title) {
+  color: orange;
+  margin: 0;
+  background: #131c21;
+  height: 6rem;
+  align-content: center;
+  justify-items: center;
+}
+
+.consult form .title h1 {
+  margin: 0;
+}
+
+.consult form .label1 {
+  margin-top: 2.5rem;
+  font-size: 20px;
+  padding-left: 20px;
+  color: rgba(0, 0, 0, 0.747);
+}
+
+.consult form #Personal {
+  margin-top: 12px;
+  padding-left: 7px;
+  display: flex;
+  justify-content: space-around;
+  padding-right: 7px;
+}
+
+.consult form #Personal input {
+  height: 45px;
+  width: 12rem;
+  padding-left: 10px;
+}
+
+.consult form .label2 {
+  margin-top: 2.5rem;
+  font-size: 20px;
+  padding-left: 20px;
+  color: rgba(0, 0, 0, 0.747);
+}
+
+.consult form #details {
+  margin-top: 12px;
+  padding-left: 7px;
+  display: flex;
+  justify-content: space-around;
+  padding-right: 7px;
+}
+
+.consult form #details input {
+  /* -webkit-text-security: square; */
+  height: 45px;
+  width: 12rem;
+  padding-left: 10px;
+}
+
+.consult form #details input::placeholder {
+}
+
+.consult form input[type="submit"] {
+  font-weight: bold;
+  display: block;
+  width: 28rem;
+  height: 55px;
+  margin-top: 3rem;
+  justify-self: center;
+  background: orange;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  filter: drop-shadow(0px 3px 1px rgba(0, 0, 0, 0.473));
+  /* margin-left: 20px; */
+}
+
+.consult .reach-info {
+  font-weight: bold;
+  margin-left: 5rem;
+  /* background: #131c21; */
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.consult .reach-info > div {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.consult .reach-info > div article h3 {
+  font-size: 20px;
+  margin-bottom: 0;
+  color: rgba(0, 0, 0, 0.747);
+}
+
+.consult .reach-info > div article p {
+  font-size: 17px;
+}
+
+.consult .reach-info > div img {
+  width: 4rem;
+  margin-right: 23px;
+}
+
+.testimonial {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding-left: 5rem;
+  display: flex;
+  font-weight: bold;
+  padding-bottom: 3rem;
+}
+
+.testimonial .reports {
+  font-weight: 600;
+  width: 42rem;
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+.testimonial .reports p {
+  margin: 0;
+  color: rgba(0, 0, 0, 0.774);
+}
+
+.testimonial .reports p:not(.says-text) {
+  color: #aaaaaa;
+  margin-bottom: 40px;
+}
+
+.testimonial article {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.testimonial article hr {
+  width: 5rem;
+  border: 2.2px solid orange;
+  margin: 0;
+  margin-right: 12px;
+}
+
+.testimonial .clients {
+  overflow-x: hidden;
+  height: 25rem;
+}
+
+.testimonial .clients .clients-slider {
+  width: 45rem;
+  transition: all 2s;
+  display: flex;
+}
+
+.testimonial .clients .clients-slider .clients-slide {
+  width: 45rem;
+  flex-shrink: 0;
+  height: 25rem;
+}
+
+:where(.clients-slide) div {
+  padding: 20px 15px;
+  color: white;
+  position: relative;
+  background-color: #212121;
+  height: 12rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  font-size: 15px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.testimonial .clients .clients-slider .clients-slide > div::after {
+  position: absolute;
+  content: "";
+  bottom: -5px;
+  left: 0;
+  margin-left: 3rem;
+  width: 20px;
+  height: 25px;
+  background-color: #212121;
+  transform: rotate(-35deg);
+}
+
+.testimonial .clients .clients-slider .clients-slide > article {
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+  font-weight: 600;
+  font-size: 19px;
+  color: rgba(0, 0, 0, 0.685);
+}
+
+.testimonial .clients .clients-slider .clients-slide > article img {
+  max-width: 6rem;
+  border-radius: 3rem;
+  margin-right: 15px;
+}
+
+.testimonial .clients2 {
+  display: none;
+}
+
+.testimonial .clients2 .clients2-slide {
+  width: 45rem;
+  height: 25rem;
+  display: none;
+}
+
+.testimonial .clients2 .clients2-slide.cslides {
+  display: block;
+  animation-name: op;
+  animation-duration: 1s;
+}
+
+@keyframes op {
+  25% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+:where(.clients2-slide) div {
+  padding: 20px 15px;
+  color: white;
+  position: relative;
+  background-color: #212121;
+  height: 12rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  font-size: 15px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.testimonial .clients2 .clients2-slide > div::after {
+  position: absolute;
+  content: "";
+  bottom: -5px;
+  left: 0;
+  margin-left: 3rem;
+  width: 20px;
+  height: 25px;
+  background-color: #212121;
+  transform: rotate(-35deg);
+}
+
+.testimonial .clients2 .clients2-slide > article {
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+  font-weight: 600;
+  font-size: 19px;
+  color: rgba(0, 0, 0, 0.685);
+}
+
+.testimonial .clients2 .clients2-slide > article img {
+  max-width: 6rem;
+  border-radius: 3rem;
+  margin-right: 15px;
+}
+
+footer {
+  text-align: center;
+  background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.788),
+      rgba(0, 0, 0, 0.705)
+    ),
+    url(./img/truck-1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-top: 5rem;
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+footer > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer > div h2 {
+  font-size: 30px;
+}
+footer img {
+  max-width: 5rem;
+  margin-right: 12px;
+}
+
+footer > p {
+  font-size: 30px;
+  margin: 0;
+  margin-bottom: 1.2rem;
+}
+
+footer > p a {
+  color: white;
+  text-decoration: none;
+}
+
+footer > a button {
+  padding: 20px 25px;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  background-color: orange;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px hsl(0, 0%, 50%);
+  font-size: 17px;
+  font-weight: 545;
+}
+
+@media screen and (max-width: 1300px) {
+  .consult {
+    margin-bottom: 5rem;
+  }
+  .testimonial {
+    display: block;
+    justify-items: center;
+    padding-left: unset;
+  }
+
+  .testimonial .reports {
+    margin-bottom: 30px;
+  }
+
+  .testimonial .clients {
+    display: none;
+  }
+
+  .testimonial .clients2 {
+    display: block;
+  }
+
+  .testimonial .clients2 .clients2-slide {
+    width: 42rem;
+  }
+
+  .testimonial .reports {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 1296px) {
+  .navbar-info .info .contact {
+    margin-left: 12rem;
+  }
+}
+
+@media screen and (max-width: 1013px) {
+  .navbar-info .info .contact {
+    margin-left: 8rem;
+  }
+
+  .grid {
+    gap: 3rem;
+  }
+  .grid > div p {
+    line-height: 2;
+  }
+
+  .consult {
+    text-align: center;
+    display: block;
+    padding-left: unset;
+  }
+
+  .consult hr {
+    justify-self: center;
+    width: 10rem;
+    height: 2px;
+    margin-bottom: 12px;
+  }
+
+  .consult form {
+    width: 40rem;
+    height: unset;
+    justify-self: center;
+    margin-right: unset;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+
+  .consult form .title h1 {
+    font-size: 30px;
+  }
+
+  .consult form #Personal {
+    display: block;
+  }
+
+  .consult form #Personal input {
+    margin-bottom: 12px;
+  }
+
+  .consult form #details {
+    display: block;
+  }
+
+  .consult form #details input {
+    margin-bottom: 12px;
+  }
+
+  .consult .reach-info {
+    margin-left: unset;
+    justify-self: center;
+  }
+
+  .consult .reach-info > div {
+    margin-bottom: 1rem;
+  }
+
+  .consult form :is(#Personal, #details) input {
+    display: block;
+    justify-self: center;
+    width: 27rem;
+    height: 4rem;
+    border: 1px solid black;
+  }
+
+  .consult form input[type="submit"] {
+    width: 30rem;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 972px) {
+  .navbar-info .info .contact {
+    display: none;
+  }
+
+  .character {
+    height: 26rem;
+    background-size: cover;
+  }
+
+  .grid {
+    margin-top: 3rem;
+    gap: 2rem;
+  }
+
+  .grid > div p {
+    line-height: 2;
+  }
+
+  .consult {
+    text-align: center;
+    display: block;
+    padding-left: unset;
+  }
+
+  .consult hr {
+    justify-self: center;
+    width: 10rem;
+    height: 2px;
+    margin-bottom: 12px;
+  }
+
+  .consult form {
+    width: 40rem;
+    height: unset;
+    justify-self: center;
+    margin-right: unset;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+
+  .consult form .title h1 {
+    font-size: 30px;
+  }
+
+  .consult form #Personal {
+    display: block;
+  }
+
+  .consult form #Personal input {
+    margin-bottom: 12px;
+  }
+
+  .consult form #details {
+    display: block;
+  }
+
+  .consult form #details input {
+    margin-bottom: 12px;
+  }
+
+  .consult .reach-info {
+    margin-left: unset;
+    justify-self: center;
+  }
+
+  .consult .reach-info > div {
+    margin-bottom: 1rem;
+  }
+
+  .consult form :is(#Personal, #details) input {
+    display: block;
+    justify-self: center;
+    width: 26rem;
+    height: 4rem;
+  }
+
+  .consult form input[type="submit"] {
+    width: 28rem;
+  }
+}
+
+@media screen and (min-width: 913px) and (max-width: 956px) {
+  .navbar-info .info button {
+    margin-left: 15rem;
+  }
+
+  .character {
+    height: 26rem;
+    background-size: cover;
+  }
+  .grid {
+    margin-top: 3rem;
+    gap: 2rem;
+  }
+
+  .grid > div p {
+    line-height: 2;
+  }
+
+  .consult {
+    text-align: center;
+    display: block;
+    padding-left: unset;
+  }
+
+  .consult hr {
+    justify-self: center;
+    width: 10rem;
+    height: 2px;
+    margin-bottom: 12px;
+  }
+
+  .consult form {
+    width: 40rem;
+    height: unset;
+    justify-self: center;
+    margin-right: unset;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+
+  .consult form .title h1 {
+    font-size: 30px;
+  }
+
+  .consult form #Personal {
+    display: block;
+  }
+
+  .consult form #Personal input {
+    margin-bottom: 12px;
+  }
+
+  .consult form #details {
+    display: block;
+  }
+
+  .consult form #details input {
+    margin-bottom: 12px;
+  }
+
+  .consult .reach-info {
+    margin-left: unset;
+    justify-self: center;
+  }
+
+  .consult .reach-info > div {
+    margin-bottom: 1rem;
+  }
+
+  .consult form :is(#Personal, #details) input {
+    display: block;
+    justify-self: center;
+    width: 26rem;
+    height: 4rem;
+  }
+
+  .consult form input[type="submit"] {
+    width: 28rem;
+  }
+}
+
+@media screen and (max-width: 925px) {
+  .nav {
+    width: 50rem;
+  }
+
+  .nav ul li {
+    margin-right: 5rem;
+  }
+
+  .protection {
+    display: block;
+    justify-items: center;
+    height: 27rem;
+    padding-top: 1rem;
+  }
+
+  .protection .img2 {
+    z-index: 500;
+    bottom: 0;
+    top: auto;
+    left: 14rem;
+  }
+
+  .character {
+    height: 26rem;
+    background-size: cover;
+  }
+
+  .consult {
+    text-align: center;
+    display: block;
+    padding-left: unset;
+  }
+
+  .consult hr {
+    justify-self: center;
+    width: 15rem;
+    height: 2px;
+    margin-bottom: 12px;
+  }
+
+  .consult form {
+    width: 40rem;
+    height: unset;
+    justify-self: center;
+    margin-right: unset;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+
+  .consult form .title h1 {
+    font-size: 30px;
+  }
+
+  .consult form #Personal {
+    display: block;
+  }
+
+  .consult form #Personal input {
+    margin-bottom: 12px;
+  }
+
+  .consult form #details {
+    display: block;
+  }
+
+  .consult form #details input {
+    margin-bottom: 12px;
+  }
+
+  .consult .reach-info {
+    margin-left: unset;
+    justify-self: center;
+  }
+
+  .consult .reach-info > div {
+    margin-bottom: 1rem;
+  }
+
+  .consult form :is(#Personal, #details) input {
+    display: block;
+    justify-self: center;
+    width: 26rem;
+    height: 4rem;
+  }
+
+  .consult form input[type="submit"] {
+    width: 28rem;
+  }
+}
+
+@media screen and (max-width: 904px) {
+  .parent {
+    overflow-x: hidden;
+  }
+  .parent .child h1 {
+    font-size: 2rem;
+    background: transparent;
+    backdrop-filter: blur(5px);
+  }
+
+  .parent .child h4 {
+    font-size: 1.5rem;
+  }
+
+  .parent .child1 h4 {
+    transform: translateX(-15rem);
+  }
+
+  .navbar-info .info button {
+    margin-left: 20rem;
+  }
+
+  .character {
+    height: 26rem;
+    background-size: cover;
+  }
+  .grid {
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .grid > div p {
+    line-height: 2;
+  }
+
+  .consult {
+    text-align: center;
+    display: block;
+    padding-left: unset;
+  }
+
+  .consult hr {
+    justify-self: center;
+    width: 10rem;
+    height: 2px;
+    margin-bottom: 12px;
+  }
+
+  .consult form {
+    width: 40rem;
+    height: unset;
+    justify-self: center;
+    margin-right: unset;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+
+  .consult form .title h1 {
+    font-size: 30px;
+  }
+
+  .consult form #Personal {
+    display: block;
+  }
+
+  .consult form #Personal input {
+    margin-bottom: 12px;
+  }
+
+  .consult form #details {
+    display: block;
+  }
+
+  .consult form #details input {
+    margin-bottom: 12px;
+  }
+
+  .consult .reach-info {
+    margin-left: unset;
+    justify-self: center;
+  }
+
+  .consult .reach-info > div {
+    margin-bottom: 1rem;
+  }
+
+  .consult form :is(#Personal, #details) input {
+    display: block;
+    justify-self: center;
+    width: 26rem;
+    height: 4rem;
+  }
+
+  .consult form input[type="submit"] {
+    width: 28rem;
+  }
+}
+
+@media screen and (max-width: 855px) {
+  .navbar-info .info button {
+    margin-left: 6rem;
+  }
+
+  .nav {
+    width: 40rem;
+    /* justify-self: center; */
+    margin-left: -40px;
+  }
+
+  .nav ul li {
+    padding: 0;
+    margin-right: 4rem;
+  }
+
+  .protection {
+    display: block;
+    justify-items: center;
+    height: 27rem;
+    padding-top: 1rem;
+  }
+
+  .protection .img2 {
+    bottom: 0;
+    top: auto;
+    left: 10rem;
+  }
+
+  .reason .character {
+    height: 28rem;
+    background-size: cover;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 410px);
+    margin-top: 6.2rem;
+    gap: 12px;
+  }
+
+  .grid > div {
+    margin-bottom: 10px;
+    height: 16.7rem;
+    /* background-color: red; */
+  }
+  .grid > div p {
+    line-height: 2;
+  }
+
+  .score-board {
+    display: block;
+    height: unset;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+  }
+
+  .score-board > div {
+    margin-bottom: 20px;
+  }
+
+  .consult {
+    text-align: center;
+    display: block;
+    padding-left: unset;
+  }
+
+  .consult hr {
+    justify-self: center;
+    width: 10rem;
+    height: 2px;
+    margin-bottom: 12px;
+  }
+
+  .consult form {
+    width: 40rem;
+    height: unset;
+    justify-self: center;
+    margin-right: unset;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+
+  .consult form .title h1 {
+    font-size: 30px;
+  }
+
+  .consult form #Personal {
+    display: block;
+  }
+
+  .consult form #Personal input {
+    margin-bottom: 12px;
+  }
+
+  .consult form #details {
+    display: block;
+  }
+
+  .consult form #details input {
+    margin-bottom: 12px;
+  }
+
+  .consult .reach-info {
+    margin-left: unset;
+    justify-self: center;
+  }
+
+  .consult .reach-info > div {
+    margin-bottom: 1rem;
+  }
+
+  .consult form :is(#Personal, #details) input {
+    display: block;
+    justify-self: center;
+    width: 26rem;
+    height: 4rem;
+  }
+
+  .consult form input[type="submit"] {
+    width: 28rem;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .grid {
+    grid-template-columns: repeat(2, 350px);
+  }
+
+  .score-board {
+    display: block;
+    height: unset;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+  }
+
+  .score-board > div {
+    margin-bottom: 20px;
+  }
+
+  .consult {
+    text-align: center;
+    display: block;
+    padding-left: unset;
+  }
+
+  .consult hr {
+    justify-self: center;
+    width: 10rem;
+    height: 2px;
+    margin-bottom: 12px;
+  }
+
+  .consult form {
+    width: 40rem;
+    height: unset;
+    justify-self: center;
+    margin-right: unset;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+
+  .consult form .title h1 {
+    font-size: 30px;
+  }
+
+  .consult form #Personal {
+    display: block;
+  }
+
+  .consult form #Personal input {
+    margin-bottom: 12px;
+  }
+
+  .consult form #details {
+    display: block;
+  }
+
+  .consult form #details input {
+    margin-bottom: 12px;
+  }
+
+  .consult .reach-info {
+    margin-left: unset;
+    justify-self: center;
+  }
+
+  .consult .reach-info > div {
+    margin-bottom: 1rem;
+  }
+
+  .consult form :is(#Personal, #details) input {
+    display: block;
+    justify-self: center;
+    width: 26rem;
+    height: 4rem;
+  }
+
+  .consult form input[type="submit"] {
+    width: 28rem;
+  }
+}
+
+@media screen and (max-width: 774px) {
+  .nav {
+    width: 45rem;
+    margin-left: 0;
+  }
+
+  .nav ul li {
+    padding: 0;
+    margin-right: 4rem;
+  }
+
+  .reason .character {
+    height: 28rem;
+    background-size: cover;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 370px);
+    margin-top: 6.2rem;
+    gap: 12px;
+  }
+
+  .grid > div {
+    /* background: red; */
+  }
+  .grid > div p {
+    line-height: 2;
+    text-wrap: wrap;
+  }
+}
+@media screen and (max-width: 768px) {
+  .parent .child1 h4 {
+    /* transition: all 0.2s; */
+    /* transform: translateX(-5rem); */
+  }
+
+  .grid > div {
+    margin-bottom: unset;
+  }
+}
+
+@media screen and (max-width: 735px) {
+  .nav {
+    width: 38rem;
+    margin-left: -50px;
+  }
+
+  .nav ul li {
+    font-size: 18px;
+  }
+
+  .reason {
+    display: block;
+    margin-top: 10rem;
+    justify-items: center;
+  }
+
+  .character {
+    height: 15rem;
+  }
+
+  .grid {
+    overflow: hidden;
+    grid-template-columns: 450px;
+    gap: 2rem;
+    margin-top: 30rem;
+  }
+
+  .grid > div {
+  }
+  .grid > div p {
+    line-height: 2;
+  }
+
+  .score-board {
+    display: block;
+    height: unset;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+  }
+
+  .score-board > div {
+    margin-bottom: 20px;
+  }
+
+  .consult {
+    text-align: center;
+    display: block;
+    padding-left: unset;
+  }
+
+  .consult hr {
+    justify-self: center;
+    width: 10rem;
+    height: 2px;
+    margin-bottom: 12px;
+  }
+
+  .consult form {
+    width: 40rem;
+    height: unset;
+    justify-self: center;
+    margin-right: unset;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+
+  .consult form .title h1 {
+    font-size: 30px;
+  }
+
+  .consult form #Personal {
+    display: block;
+  }
+
+  .consult form #Personal input {
+    margin-bottom: 12px;
+  }
+
+  .consult form #details {
+    display: block;
+  }
+
+  .consult form #details input {
+    margin-bottom: 12px;
+  }
+
+  .consult .reach-info {
+    margin-left: unset;
+    justify-self: center;
+  }
+
+  .consult .reach-info > div {
+    margin-bottom: 1rem;
+  }
+
+  .consult form :is(#Personal, #details) input {
+    display: block;
+    justify-self: center;
+    width: 26rem;
+    height: 4rem;
+  }
+
+  .consult form input[type="submit"] {
+    width: 28rem;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .grid {
+    margin-top: 31rem;
+  }
+  .reason {
+    margin-top: 12rem;
+  }
+
+  .score-board {
+    display: block;
+    height: unset;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+  }
+
+  .score-board > div {
+    margin-bottom: 20px;
+  }
+
+  .consult {
+    text-align: center;
+    display: block;
+    padding-left: unset;
+  }
+
+  .consult hr {
+    justify-self: center;
+    width: 10rem;
+    height: 2px;
+    margin-bottom: 12px;
+  }
+
+  .consult form {
+    width: unset;
+    height: unset;
+    justify-self: center;
+    margin-right: unset;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+
+  .consult form .title h1 {
+    font-size: 30px;
+  }
+
+  .consult form #Personal {
+    display: block;
+  }
+
+  .consult form #Personal input {
+    margin-bottom: 12px;
+  }
+
+  .consult form #details {
+    display: block;
+  }
+
+  .consult form #details input {
+    margin-bottom: 12px;
+  }
+
+  .consult .reach-info {
+    margin-left: unset;
+    justify-self: center;
+  }
+
+  .consult .reach-info > div {
+    margin-bottom: 1rem;
+  }
+
+  .consult form :is(#Personal, #details) input {
+    display: block;
+    justify-self: center;
+    width: 22rem;
+  }
+
+  .consult form input[type="submit"] {
+    width: 25rem;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 591px) {
+  .navbar-info .info button {
+    display: none;
+  }
+  .parent .child2 h4 {
+    text-wrap: wrap;
+  }
+
+  .navbar-info .info .menu {
+    display: block;
+
+    width: 30px;
+    margin-left: 10rem;
+  }
+
+  .nav {
+    display: none;
+    /* left: 0; */
+  }
+
+  .nav2 {
+    display: block;
+
+    /* left: 0; */
+  }
+
+  .nav2 ul li {
+  }
+
+  .protection {
+    padding-top: 15px;
+    display: block;
+    height: 30rem;
+    justify-items: center;
+  }
+
+  .protection .img2 {
+    top: auto;
+    bottom: 0;
+    left: 4rem;
+  }
+
+  .inspire {
+    display: block;
+  }
+
+  .inspire > div {
+    width: fit-content;
+  }
+
+  .inspire .img {
+    height: 20rem;
+    width: 35rem;
+  }
+
+  .inspire .transport {
+  }
+
+  .inspire .transport article {
+  }
+
+  .reason {
+    display: block;
+    margin-top: 18rem;
+  }
+
+  .character {
+    height: 15rem;
+  }
+
+  .grid {
+    overflow: hidden;
+    grid-template-columns: 400px;
+    gap: 2rem;
+    margin-top: 30rem;
+  }
+
+  .grid > div {
+  }
+  .grid > div p {
+    line-height: 2;
+  }
+
+  .score-board {
+    display: block;
+    height: unset;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+  }
+
+  .score-board > div {
+    margin-bottom: 20px;
+  }
+
+  .consult {
+    text-align: center;
+    display: block;
+    padding-left: unset;
+  }
+
+  .consult hr {
+    justify-self: center;
+    width: 10rem;
+    height: 2px;
+    margin-bottom: 12px;
+  }
+
+  .consult form {
+    width: unset;
+    height: unset;
+    justify-self: center;
+    margin-right: unset;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+
+  .consult form .title h1 {
+    font-size: 30px;
+  }
+
+  .consult form #Personal {
+    display: block;
+  }
+
+  .consult form #Personal input {
+    margin-bottom: 12px;
+  }
+
+  .consult form #details {
+    display: block;
+  }
+
+  .consult form #details input {
+    margin-bottom: 12px;
+  }
+
+  .consult .reach-info {
+    margin-left: unset;
+    justify-self: center;
+  }
+
+  .consult .reach-info > div {
+    margin-bottom: 1rem;
+  }
+
+  .consult form :is(#Personal, #details) input {
+    display: block;
+    justify-self: center;
+    width: 22rem;
+  }
+
+  .consult form input[type="submit"] {
+    width: 25rem;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 574px) {
+  .reason {
+    margin-top: 10rem;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .reason {
+    margin-top: 5rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .parent {
+    overflow-x: hidden;
+  }
+  .parent .child h1 {
+    font-size: 2rem;
+    background: transparent;
+    backdrop-filter: blur(5px);
+  }
+
+  .parent .child h4 {
+    font-size: 1.5rem;
+  }
+  .parent .child1 h4 {
+    transform: translateX(-20rem);
+  }
+
+  .navbar-info .info h1 {
+    font-size: 2rem;
+  }
+
+  .navbar-info .info .contact {
+    display: none;
+  }
+
+  .navbar-info .info button {
+    display: none;
+  }
+
+  .parent .child1 {
+    padding-left: 2rem;
+  }
+
+  .parent .child2 h4 {
+    text-wrap: wrap;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .protection {
+    display: block;
+    justify-items: center;
+    height: 30rem;
+  }
+
+  .protection .img2 {
+    top: auto;
+    bottom: 0;
+    left: 10px;
+  }
+
+  .inspire {
+    display: block;
+    height: 40rem;
+  }
+
+  .inspire > div {
+    width: fit-content;
+  }
+
+  .inspire .img {
+    border: 2px solid white;
+    width: 34rem;
+    height: 20rem;
+  }
+
+  .reason {
+    display: block;
+    margin-top: 22rem;
+  }
+
+  .character {
+    height: 15rem;
+  }
+
+  .grid {
+    overflow: hidden;
+    grid-template-columns: 350px;
+    gap: 3rem;
+    margin-top: 30rem;
+  }
+
+  .grid > div {
+  }
+  .grid > div p {
+    line-height: 2;
+  }
+
+  .score-board {
+    display: block;
+    height: unset;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+  }
+
+  .score-board > div {
+    margin-bottom: 20px;
+  }
+
+  .consult {
+    text-align: center;
+    display: block;
+    padding-left: unset;
+  }
+
+  .consult hr {
+    justify-self: center;
+    width: 10rem;
+    height: 2px;
+    margin-bottom: 12px;
+  }
+
+  .consult form {
+    width: unset;
+    height: unset;
+    justify-self: center;
+    margin-right: unset;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+
+  .consult form .title h1 {
+    font-size: 30px;
+  }
+
+  .consult form #Personal {
+    display: block;
+  }
+
+  .consult form #Personal input {
+    margin-bottom: 12px;
+  }
+
+  .consult form #details {
+    display: block;
+  }
+
+  .consult form #details input {
+    margin-bottom: 12px;
+  }
+
+  .consult .reach-info {
+    margin-left: unset;
+    justify-self: center;
+  }
+
+  .consult .reach-info > div {
+    margin-bottom: 1rem;
+  }
+
+  .consult form :is(#Personal, #details) input {
+    display: block;
+    justify-self: center;
+    width: 22rem;
+  }
+
+  .consult form input[type="submit"] {
+    width: 25rem;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 473px) {
+  .parent .child2 h1 {
+    text-wrap: wrap;
+  }
+
+  .reason {
+    display: block;
+    margin-top: 20rem;
+  }
+
+  .character {
+    height: 12rem;
+  }
+  .inspire {
+    margin-bottom: 2rem;
+  }
+
+  .grid {
+    overflow: hidden;
+    grid-template-columns: 300px;
+    gap: 3rem;
+    margin-top: 32rem;
+  }
+
+  .grid > div {
+  }
+  .grid > div p {
+    line-height: 2;
+  }
+
+  .score-board {
+    display: block;
+    height: unset;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+  }
+
+  .score-board > div {
+    margin-bottom: 20px;
+  }
+
+  .consult {
+    text-align: center;
+    display: block;
+    padding-left: unset;
+  }
+
+  .consult hr {
+    width: 4rem;
+    height: 2px;
+  }
+
+  .consult form {
+    width: unset;
+    height: unset;
+    justify-self: center;
+    margin-right: unset;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+
+  .consult form .title h1 {
+    font-size: 30px;
+  }
+
+  .consult form #Personal {
+    display: block;
+  }
+
+  .consult form #Personal input {
+    margin-bottom: 12px;
+  }
+
+  .consult form #details {
+    display: block;
+  }
+
+  .consult form #details input {
+    margin-bottom: 12px;
+  }
+
+  .consult .reach-info {
+    margin-left: unset;
+  }
+
+  .consult .reach-info > div {
+    margin-bottom: 1rem;
+  }
+
+  .consult form :is(#Personal, #details) input {
+    display: block;
+    justify-self: center;
+    width: 22rem;
+  }
+}
+
+@media screen and (max-width: 462px) {
+  .reason {
+    margin-top: 30rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  :where(.clients2-slide) div {
+    height: 16rem;
+  }
+}
+
+@media screen and (max-width: 444px) {
+  .parent .child1 h4 {
+    text-wrap: wrap;
+  }
+
+  .navbar-info .info .menu {
+    margin-left: 3rem;
+  }
+
+  .reason {
+    display: block;
+    margin-top: 25rem;
+  }
+
+  .character {
+    height: 12rem;
+  }
+
+  .grid {
+    overflow: hidden;
+    grid-template-columns: 300px;
+    gap: 3rem;
+    margin-top: 32rem;
+  }
+
+  .grid > div {
+  }
+
+  .inspire {
+    height: 46rem;
+  }
+
+  .score-board {
+    display: block;
+    height: unset;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+  }
+
+  .score-board > div {
+    margin-bottom: 20px;
+  }
+
+  .consult {
+    text-align: center;
+    display: block;
+    padding-left: unset;
+  }
+
+  .consult hr {
+    width: 10rem;
+    height: 2px;
+  }
+
+  .consult form {
+    width: unset;
+    height: unset;
+    justify-self: center;
+    margin-right: unset;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+
+  .consult form .title h1 {
+    font-size: 30px;
+  }
+
+  .consult form #Personal {
+    display: block;
+  }
+
+  .consult form #Personal input {
+    margin-bottom: 12px;
+  }
+
+  .consult form #details {
+    display: block;
+  }
+
+  .consult form #details input {
+    margin-bottom: 12px;
+  }
+
+  .consult .reach-info {
+    margin-left: unset;
+  }
+
+  .consult .reach-info > div {
+    margin-bottom: 1rem;
+  }
+
+  .consult form :is(#Personal, #details) input {
+    display: block;
+    justify-self: center;
+    width: 22rem;
+  }
+}
+
+@media screen and (max-width: 395px) {
+  .parent .child1 h1 {
+    text-wrap: wrap;
+  }
+
+  .navbar-info .info {
+    padding-left: 3px;
+  }
+
+  .navbar-info .info img {
+    width: 50px;
+  }
+
+  .nav {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 395px) {
+  .navbar-info .info h1 {
+    font-size: 25px;
+  }
+  .navbar-info .info .menu {
+    margin-left: 10rem;
+  }
+
+  .parent .child h1 {
+    font-size: 20px;
+    width: fit-content;
+    text-wrap: wrap;
+  }
+
+  .parent .child h4 {
+    font-size: 15px;
+    width: fit-content;
+    text-wrap: wrap;
+    overflow-wrap: break-word;
+  }
+
+  .parent .child1 h4 {
+    text-wrap: wrap;
+  }
+
+  .protection {
+    display: block;
+    padding: 0;
+    justify-items: center;
+    font-size: 20px;
+    text-wrap: wrap;
+    overflow: hidden;
+    height: 20rem;
+  }
+
+  .protection img {
+    margin-top: 2rem;
+    width: 50px;
+    margin-right: 0;
+    margin-bottom: 12px;
+  }
+
+  .protection p {
+    font-size: 15px;
+  }
+
+  .protection .img2 {
+    width: 15rem;
+    top: auto;
+    bottom: 0;
+    left: 4rem;
+  }
+  .services {
+  }
+
+  .services span {
+    font-size: 20px;
+  }
+
+  .guarantee {
+    font-size: 27px;
+    text-wrap: wrap;
+  }
+
+  .inspire {
+    display: block;
+    overflow: hidden;
+    height: 70rem;
+  }
+
+  .inspire > div {
+    width: fit-content;
+  }
+
+  .inspire .img {
+    height: 20rem;
+    width: 25rem;
+    border: 2px solid white;
+    display: block;
+  }
+
+  .reason {
+    display: block;
+    margin-top: 5rem;
+  }
+
+  .character {
+    height: 12rem;
+  }
+
+  .grid {
+    overflow: hidden;
+    grid-template-columns: 230px;
+    gap: 5rem;
+    margin-top: 34rem;
+  }
+
+  .grid > div {
+    /* height: 22rem; */
+    height: fit-content;
+    /* background-color: red; */
+    overflow: hidden;
+  }
+
+  .score-board {
+    display: block;
+    height: unset;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+  }
+
+  .score-board > div {
+    margin-bottom: 20px;
+  }
+
+  .consult {
+    text-align: center;
+    display: block;
+    padding-left: unset;
+  }
+
+  .consult hr {
+    width: 12rem;
+    height: 2px;
+  }
+
+  .consult form {
+    width: unset;
+    height: unset;
+    justify-self: center;
+    margin-right: unset;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+
+  .consult form .title h1 {
+    font-size: 30px;
+  }
+
+  .consult form #Personal {
+    display: block;
+  }
+
+  .consult form #Personal input {
+    margin-bottom: 12px;
+  }
+
+  .consult form #details {
+    display: block;
+  }
+
+  .consult form #details input {
+    margin-bottom: 12px;
+  }
+
+  .consult .reach-info {
+    margin-left: unset;
+  }
+
+  .consult .reach-info > div {
+    margin-bottom: 1rem;
+  }
+
+  .consult form :is(#Personal, #details) input {
+    display: block;
+    justify-self: center;
+    width: 20rem;
+  }
+
+  /* .consult form input[type='submit']{
+  margin-right: 5px;
+  margin-left: 5px;
+} */
+}
+
+@media screen and (max-width: 360px) {
+  .grid {
+    margin-top: 42rem;
+  }
+
+  .score-board {
+    display: block;
+    height: unset;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+  }
+
+  .score-board > div {
+    margin-bottom: 20px;
+  }
+
+  .consult {
+    text-align: center;
+    display: block;
+    padding-left: unset;
+  }
+
+  .consult hr {
+    width: 12rem;
+    height: 2px;
+  }
+
+  .consult form {
+    width: unset;
+    height: unset;
+    justify-self: center;
+    margin-right: unset;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+
+  .consult form .title h1 {
+    font-size: 30px;
+  }
+
+  .consult form #Personal {
+    display: block;
+  }
+
+  .consult form #Personal input {
+    margin-bottom: 12px;
+  }
+
+  .consult form #details {
+    display: block;
+  }
+
+  .consult form #details input {
+    margin-bottom: 12px;
+  }
+
+  .consult .reach-info {
+    margin-left: unset;
+  }
+
+  .consult .reach-info > div {
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (min-width: 361px) and (max-width: 367px) {
+  .grid {
+    margin-top: 38rem;
+  }
+}
+
+@media screen and (max-width: 335px) {
+  .navbar-info .info {
+    padding-left: 12px;
+  }
+  .navbar-info .info img {
+    width: 45px;
+  }
+  .navbar-info .info .menu {
+    margin-left: 5rem;
+    /* margin-left: 1px; */
+  }
+
+  .inspire {
+    height: 73rem;
+  }
+
+  .reason {
+    display: block;
+    margin-top: 8rem;
+  }
+
+  .character {
+    height: 10rem;
+  }
+
+  .grid {
+    overflow: hidden;
+    grid-template-columns: 205px;
+    gap: 7rem;
+    margin-top: 40rem;
+  }
+
+  .score-board {
+    display: block;
+    height: unset;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+  }
+
+  .score-board > div {
+    margin-bottom: 20px;
+  }
+
+  .consult {
+    text-align: center;
+    display: block;
+    padding-left: unset;
+  }
+
+  .consult hr {
+    width: 10rem;
+    height: 2px;
+  }
+
+  .consult form {
+    width: unset;
+    height: unset;
+    justify-self: center;
+    margin-right: unset;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+
+  .consult form .title h1 {
+    font-size: 30px;
+  }
+
+  .consult form #Personal {
+    display: block;
+  }
+
+  .consult form #Personal input {
+    margin-bottom: 12px;
+  }
+
+  .consult form #details {
+    display: block;
+  }
+
+  .consult form #details input {
+    margin-bottom: 12px;
+  }
+
+  .consult .reach-info {
+    margin-left: unset;
+  }
+
+  .consult .reach-info > div {
+    margin-bottom: 1rem;
+  }
+}
+@media screen and (max-width: 344px) {
+  .inspire {
+    height: 74rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .inspire {
+    height: 76rem;
+  }
+
+  .reason {
+    margin-top: 4.5rem;
+  }
+}
+
+@media screen and (max-width: 273px) {
+  .navbar-info .info .menu {
+    margin-left: 2.5rem;
+  }
+
+  .grid {
+    margin-top: 45rem;
+  }
+
+  .inspire {
+    height: 85rem;
+  }
+}
+
+@media screen and (max-width: 240px) {
+  .navbar-info .info .menu {
+    margin-left: 2.5rem;
+  }
+
+  .grid {
+    margin-top: 45rem;
+  }
+
+  .inspire {
+    height: 97.7rem;
+  }
+}
+
+@media screen and (max-width: 200px) {
+  .navbar-info .info h1 {
+    font-size: 20px;
+  }
+  .navbar-info .info .menu {
+    margin-left: 0.8rem;
+  }
+
+  .grid {
+    margin-top: 57rem;
+  }
+
+  .inspire {
+    height: 109rem;
+  }
+}
